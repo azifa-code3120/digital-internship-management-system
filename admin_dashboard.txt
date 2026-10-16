@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h1>Admin Dashboard</h1>
+
+    <p>Welcome, Administrator</p>
+
+    <div class="admin-menu">
+
+        <a href="manage_students.php">
+            <button>Manage Students</button>
+        </a>
+
+        <a href="manage_internships.php">
+            <button>Manage Internships</button>
+        </a>
+
+        <a href="manage_reports.php">
+            <button>View Reports</button>
+        </a>
+
+        <a href="admin_status.php">
+            <button>Internship Status</button>
+        </a>
+
+        <a href="index.php">
+            <button>Logout</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

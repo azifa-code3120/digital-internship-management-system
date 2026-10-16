@@ -1,0 +1,1122 @@
+/* ===== Digital Management System - Classic Theme ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+    background: #f4efe6;
+    color: #2f2a24;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #3b2f2f;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* Sub heading */
+h2 {
+    text-align: center;
+    font-size: 25px;
+    color: #6b4f3a;
+    margin-bottom: 20px;
+}
+
+/* Welcome text */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #5a4a3a;
+    margin-bottom: 30px;
+}
+
+/* Student Login button */
+button,
+input[type="submit"],
+a {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 13px 30px;
+    background: #5b4636;
+    color: #fffaf0;
+    border: 1px solid #3e3025;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #806044;
+    transform: translateY(-2px);
+}
+
+/* If Student Login is a link */
+a {
+    color: #fffaf0;
+    text-decoration: none;
+}
+
+/* Login form */
+form {
+    width: 420px;
+    margin: 50px auto;
+    padding: 35px;
+    background: #fffdf8;
+    border: 1px solid #cdbda8;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(70, 50, 30, 0.15);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a382b;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #cbbba7;
+    border-radius: 5px;
+    background: #fffdf9;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #806044;
+    box-shadow: 0 0 5px rgba(128, 96, 68, 0.25);
+}
+
+input[type="submit"] {
+    padding: 12px 30px;
+    background: #5b4636;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background: #806044;
+}
+
+/* ===== STUDENT DASHBOARD ===== */
+
+.dashboard-header {
+    background: #3b2b20;
+    color: #f8f1e5;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    color: #f8f1e5;
+    text-align: left;
+    font-size: 28px;
+    margin: 0;
+}
+
+.dashboard-header p {
+    color: #d8b36a;
+    text-align: left;
+    margin: 5px 0 0;
+}
+
+.logout-btn {
+    background: #c49a4a;
+    color: #fff;
+    padding: 11px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background: #a77c35;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+.welcome-section h2 {
+    font-size: 32px;
+    color: #3b2b20;
+}
+
+.welcome-section p {
+    color: #6b5a49;
+}
+
+.dashboard-container {
+    max-width: 1100px;
+    margin: 20px auto 60px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: #fffdf8;
+    border: 1px solid #d5c2a5;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(70, 50, 30, 0.12);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(70, 50, 30, 0.20);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+    color: #4b3829;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #6b5a49;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card a {
+    display: inline-block;
+    background: #5b4636;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.dashboard-card a:hover {
+    background: #806044;
+}
+
+.dashboard-footer {
+    background: #3b2b20;
+    color: #e5d0a3;
+    text-align: center;
+    padding: 25px;
+}
+
+.dashboard-footer p {
+    color: #e5d0a3;
+    margin-bottom: 5px;
+}
+
+.dashboard-footer span {
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        padding: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 20px;
+    }
+}
+.logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #b89b72;
+    padding: 5px;
+    background: #fffdf8;
+    box-shadow: 0 8px 20px rgba(60, 45, 30, 0.20);
+}
+/* ===== ADMIN DASHBOARD ===== */
+
+.admin-dashboard {
+    min-height: 100vh;
+    padding: 70px 90px;
+    box-sizing: border-box;
+}
+
+.admin-header {
+    max-width: 1100px;
+    margin: 0 auto 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c8b8a5;
+    padding-bottom: 25px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #3f3027;
+    letter-spacing: 1px;
+}
+
+.admin-header p {
+    margin: 0;
+    font-size: 18px;
+    color: #6b5545;
+}
+
+/* Menu area */
+
+.admin-menu {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Dashboard cards */
+
+.admin-menu a {
+    text-decoration: none;
+}
+
+.admin-menu button {
+    width: 100%;
+    height: 90px;
+    background: #5b4638;
+    color: #fffaf2;
+    border: 1px solid #765e4d;
+    border-radius: 8px;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 15px rgba(70, 50, 35, 0.15);
+}
+
+.admin-menu button:hover {
+    background: #3f3027;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(70, 50, 35, 0.22);
+}
+
+/* Logout */
+
+.admin-menu .logout {
+    background: transparent;
+    color: #5b4638;
+    border: 1px solid #5b4638;
+}
+
+.admin-menu .logout:hover {
+    background: #5b4638;
+    color: white;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .admin-dashboard {
+        padding: 40px 25px;
+    }
+
+    .admin-header {
+        display: block;
+        text-align: center;
+    }
+
+    .admin-header h1 {
+        font-size: 36px;
+    }
+
+    .admin-header p {
+        margin-top: 15px;
+    }
+
+    .admin-menu {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== MANAGE STUDENTS ===== */
+
+.student-table-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: auto;
+    background: #fffaf2;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(70, 50, 35, 0.12);
+    border: 1px solid #d8c7b3;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.student-table th {
+    background: #5b4638;
+    color: #fffaf2;
+    padding: 16px 14px;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+}
+
+.student-table td {
+    padding: 16px 14px;
+    border-bottom: 1px solid #dfd2c3;
+    color: #4b3a2f;
+    font-size: 15px;
+}
+
+.student-table tbody tr {
+    background: #fffdf8;
+    transition: 0.25s ease;
+}
+
+.student-table tbody tr:hover {
+    background: #f3eadf;
+}
+
+.view-btn {
+    background: #6b5142;
+    color: #fffaf2;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-family: Georgia, "Times New Roman", serif;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.view-btn:hover {
+    background: #3f3027;
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    background: #5b4638;
+    color: #fffaf2;
+    text-decoration: none;
+    border-radius: 7px;
+    font-family: Georgia, "Times New Roman", serif;
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #3f3027;
+}
+.login-container a {
+    color: #6b4f3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+/* =================================
+   HOME PAGE - CLASSIC ELEGANT STYLE
+   ================================= */
+
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #f6f0e6;
+    text-align: center;
+
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+
+/* Logo */
+
+.home-logo {
+    margin-bottom: 20px;
+}
+
+.logo-circle {
+    width: 85px;
+    height: 85px;
+
+    border: 3px solid #b08a52;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    background: #fffaf2;
+
+    color: #4b3427;
+
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    box-shadow: 0 5px 15px rgba(75,52,39,0.18);
+}
+
+.home-logo p {
+    margin-top: 10px;
+
+    font-family: Georgia, serif;
+
+    color: #6b5142;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+/* Main Heading */
+
+.home-container h1 {
+    margin: 10px 0 5px;
+
+    color: #3f2a20;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Gold line */
+
+.gold-line {
+    width: 100px;
+    height: 3px;
+
+    background: #b08a52;
+
+    margin: 12px auto 15px;
+
+    border-radius: 5px;
+}
+
+
+/* Sub heading */
+
+.home-container h2 {
+    margin: 5px 0 12px;
+
+    color: #6b5142;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    font-weight: normal;
+}
+
+
+/* Welcome text */
+
+.welcome-text {
+    color: #66554b;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Student Card */
+
+.home-card {
+    width: 380px;
+
+    background: #fffdf9;
+
+    border: 1px solid #d8c4a8;
+
+    border-radius: 12px;
+
+    padding: 30px 35px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 12px 30px rgba(75,52,39,0.13);
+}
+
+
+.home-card h3 {
+    margin-top: 0;
+
+    color: #4b3427;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+.home-card p {
+    color: #76675e;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* Login Button */
+
+.home-login-btn {
+    display: inline-block;
+
+    padding: 13px 38px;
+
+    background: #5b4031;
+
+    color: #fffaf3;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    border: 1px solid #432e22;
+
+    transition: 0.3s;
+}
+
+
+.home-login-btn:hover {
+    background: #3f2a20;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(63,42,32,0.25);
+}
+
+
+/* Footer */
+
+.footer-text {
+    margin-top: 35px;
+
+    color: #8a786c;
+
+    font-size: 13px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .home-container h1 {
+        font-size: 30px;
+    }
+
+    .home-container h2 {
+        font-size: 19px;
+    }
+
+    .home-card {
+        width: 90%;
+    }
+
+}
+/* =========================
+   HOME PAGE
+   ========================= */
+
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5efe6;
+    color: #3b2920;
+}
+
+/* Header */
+
+.home-header {
+    width: 100%;
+    padding: 25px 50px;
+    box-sizing: border-box;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #5b4030;
+}
+
+/* Main */
+
+.home-content {
+    flex: 1;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    margin-top: -40px;
+}
+
+.welcome-text {
+    font-size: 15px;
+    letter-spacing: 4px;
+    color: #8a6a52;
+    margin-bottom: 18px;
+}
+
+.home-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+    font-weight: bold;
+
+    color: #3b2920;
+
+    margin: 0;
+    max-width: 900px;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 18px;
+    color: #6b5142;
+
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+/* Login Button */
+
+.login-btn {
+    display: inline-block;
+
+    padding: 14px 38px;
+
+    background: #5b4030;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #3f2b20;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+
+.home-container footer {
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 14px;
+    color: #806452;
+}
+.login-btn {
+    display: inline-block;
+
+    padding: 14px 40px;
+
+    background: #5b4030;
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #3f2b20;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+/* Back Button Text Fix */
+
+.back-btn {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+.admin-menu a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.admin-menu button {
+    color: #ffffff !important;
+}
+/* ==============================
+   BUTTON TEXT VISIBILITY FIX
+   ============================== */
+
+/* All normal links used as buttons */
+a.view-btn,
+a.upload-btn,
+a.approve-btn,
+a.reject-btn,
+a.back-btn,
+a.login-btn {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+
+/* Hover text */
+a.view-btn:hover,
+a.upload-btn:hover,
+a.approve-btn:hover,
+a.reject-btn:hover,
+a.back-btn:hover,
+a.login-btn:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+
+/* Actual buttons */
+button {
+    color: #ffffff !important;
+}
+
+
+/* Admin menu buttons */
+.admin-menu button {
+    color: #ffffff !important;
+}
+
+
+/* Submit buttons */
+.submit-btn {
+    color: #ffffff !important;
+}
+
+
+/* Links containing buttons */
+.admin-menu a {
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   FINAL STUDENT SIDEBAR FIX
+   SAME SIDEBAR ON DASHBOARD / PROFILE / INTERNSHIP / STATUS
+   NO MOVEMENT
+   ========================================================= */
+
+.sidebar {
+    width: 255px !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #243447 !important;
+    border-right: 1px solid #c6a15b !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    z-index: 9999 !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+}
+
+.sidebar-title {
+    width: 100% !important;
+    padding: 30px 20px 25px !important;
+    margin: 0 !important;
+
+    text-align: center !important;
+    box-sizing: border-box !important;
+
+    background: #243447 !important;
+    border-bottom: 1px solid rgba(198,161,91,0.55) !important;
+}
+
+.sidebar-title h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #f3d99b !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 22px !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.5px !important;
+    font-weight: bold !important;
+}
+
+.sidebar-title p {
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+
+    color: #ffffff !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 13px !important;
+}
+
+.sidebar-menu {
+    width: 100% !important;
+    padding: 25px 15px !important;
+    margin: 0 !important;
+
+    flex: 1 !important;
+    box-sizing: border-box !important;
+
+    background: #243447 !important;
+}
+
+.menu-label {
+    margin: 0 0 15px 12px !important;
+    padding: 0 !important;
+
+    color: #d8b66c !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    letter-spacing: 1.2px !important;
+}
+
+.sidebar-menu a {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    gap: 13px !important;
+
+    padding: 13px 14px !important;
+    margin: 0 0 6px 0 !important;
+
+    box-sizing: border-box !important;
+
+    background: transparent !important;
+    color: #f2f4f6 !important;
+
+    text-decoration: none !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+
+    border-radius: 4px !important;
+
+    position: relative !important;
+    left: 0 !important;
+    right: auto !important;
+
+    transform: none !important;
+    transition: none !important;
+}
+
+.sidebar-menu a:hover {
+    width: 100% !important;
+
+    padding: 13px 14px !important;
+    margin: 0 0 6px 0 !important;
+
+    left: 0 !important;
+    right: auto !important;
+
+    background: rgba(198,161,91,0.17) !important;
+    color: #ffffff !important;
+
+    transform: none !important;
+    transition: none !important;
+
+    text-decoration: none !important;
+}
+
+.sidebar-menu a.active {
+    width: 100% !important;
+
+    padding: 13px 14px !important;
+    margin: 0 0 6px 0 !important;
+
+    left: 0 !important;
+    right: auto !important;
+
+    background: #c6a15b !important;
+    color: #243447 !important;
+
+    font-weight: 600 !important;
+
+    transform: none !important;
+    transition: none !important;
+
+    text-decoration: none !important;
+}
+
+.menu-icon {
+    width: 24px !important;
+    min-width: 24px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: center !important;
+    font-size: 16px !important;
+    color: inherit !important;
+}
+
+.sidebar-bottom {
+    width: 100% !important;
+
+    padding: 18px 15px !important;
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    background: #243447 !important;
+    border-top: 1px solid rgba(198,161,91,0.4) !important;
+}
+
+.sidebar-bottom .logout-link {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    padding: 11px !important;
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    background: transparent !important;
+    color: #f3d99b !important;
+
+    border: 1px solid #d8b66c !important;
+    border-radius: 4px !important;
+
+    text-decoration: none !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+
+    transform: none !important;
+    transition: none !important;
+}
+
+.sidebar-bottom .logout-link:hover {
+    width: 100% !important;
+
+    padding: 11px !important;
+    margin: 0 !important;
+
+    background: #c6a15b !important;
+    color: #243447 !important;
+
+    transform: none !important;
+    transition: none !important;
+
+    text-decoration: none !important;
+}
+
+/* Student pages must start beside the fixed sidebar. */
+.main-content {
+    margin-left: 255px !important;
+    min-height: 100vh !important;
+    box-sizing: border-box !important;
+}
+
+/* Prevent the global link rules elsewhere in this file from
+   affecting student sidebar links. */
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active,
+.sidebar a:visited {
+    text-decoration: none !important;
+}
+
+/* Do not allow generic button/link hover movement to affect sidebar. */
+.sidebar *,
+.sidebar *:hover {
+    transform: none !important;
+}

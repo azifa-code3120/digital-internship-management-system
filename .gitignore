@@ -1,0 +1,9 @@
+# Private configuration
+db_connect.php
+.env
+
+# Uploaded files and local data
+uploads/
+
+# Temporary files
+*.log
